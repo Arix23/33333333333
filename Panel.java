@@ -22,7 +22,7 @@ public class Panel extends JPanel implements ActionListener{
 		this.pd = pd;
 		this.setPreferredSize(new Dimension(150,50));
 		
-		this.solve = new JButton("RESOLVER");
+		this.solve = new JButton("SOLVE");
 		this.solve.addActionListener(this);
 		this.solve.setBackground(Color.WHITE);
 		

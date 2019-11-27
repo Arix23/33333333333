@@ -52,7 +52,7 @@ public class NumericalMethodsPanel extends JPanel {
 			guess = newtonRhapsonGuess;
 		}
 
-		System.out.println("The new guess is " + guess);
+		System.out.println("The final guess is " + guess);
 		System.out.println("Solved in : " + count + " iterations");
 		System.out.println("The error is " + error);
 		System.out.println(" ");
