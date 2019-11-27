@@ -1,16 +1,20 @@
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.TextField;
 
 import javax.swing.JPanel;
 
 public class NumericalMethodsPanel extends JPanel {
 	private double idealGasConstant  = 0.082054;
+	private TextField a,
+					  b;
 	
 	public NumericalMethodsPanel() {
 		super();
 		this.setPreferredSize(new Dimension(400, 600));
 		this.setOpaque(true);
 		this.setBackground(Color.GRAY);
+		
 	}
 	
 	public void NewtonRhapsonSolver(double a, double b, double temperature, double pressure) {
