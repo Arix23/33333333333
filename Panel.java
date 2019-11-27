@@ -1,3 +1,7 @@
+//ARI VALENZUELA (A01635584)
+//NATALY HERNANDEZ (A01631314)
+//FINAL PROJECT
+//NUMERICAL METHODS
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -29,7 +33,7 @@ public class Panel extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if (e.getSource() == solve) {
-			this.pd.leer();
+			this.pd.leer();	
 		}
 	}
 	
