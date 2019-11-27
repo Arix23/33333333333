@@ -14,10 +14,19 @@ public class NumericalMethodsPanel extends JPanel {
 	}
 	
 	public void NewtonRhapsonSolver(double a, double b, double temperature, double pressure) {
+		double error = 100;
 		double initialGuess = this.idealGasSolver(pressure, temperature);
 		System.out.println("The initial guess is " + initialGuess);
-		double newtonRhapsonGuess = initialGuess - (this.vanDerWaalsEquation(a, b, initialGuess, temperature, pressure)/this.vanDerWaalsEquationDerivative(a, b, initialGuess, temperature, pressure));
-		System.out.println("The new guess is " + newtonRhapsonGuess);
+		int count = 0;
+		while(error>0.001) {
+			count++;
+			double newtonRhapsonGuess = initialGuess - (this.vanDerWaalsEquation(a, b, initialGuess, temperature, pressure)/this.vanDerWaalsEquationDerivative(a, b, initialGuess, temperature, pressure));
+			error = Math.abs(((newtonRhapsonGuess - initialGuess)/newtonRhapsonGuess));
+			System.out.println("The error is " + error);
+			initialGuess = newtonRhapsonGuess;
+			System.out.println("The new guess is " + newtonRhapsonGuess);
+			System.out.println(count);
+		}
 		
 		
 	}
