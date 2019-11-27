@@ -70,10 +70,6 @@ public class NumericalMethodsPanel extends JPanel {
 		return pressure - secondPart + thirdPart;
 	}
 
-	public static void main(String[] args) {
-//		NumericalMethodsPanel nm = new NumericalMethodsPanel();
-//		nm.NewtonRhapsonSolver(3.592, 0.04267, 300, 1);
-	}
 
 	public void leer() {
 

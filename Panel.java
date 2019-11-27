@@ -30,7 +30,6 @@ public class Panel extends JPanel implements ActionListener{
 		// TODO Auto-generated method stub
 		if (e.getSource() == solve) {
 			this.pd.leer();
-			System.out.println("wuwiuwi");
 		}
 	}
 	
