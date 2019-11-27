@@ -1,3 +1,8 @@
+//ARI VALENZUELA (A01635584)
+//NATALY HERNANDEZ (A01631314)
+//FINAL PROJECT
+//NUMERICAL METHODS
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -47,7 +52,7 @@ public class NumericalMethodsPanel extends JPanel {
 			guess = newtonRhapsonGuess;
 		}
 
-		System.out.println("The new guess is " + guess);
+		System.out.println("The final guess is " + guess);
 		System.out.println("Solved in : " + count + " iterations");
 		System.out.println("The error is " + error);
 		System.out.println(" ");
@@ -70,10 +75,6 @@ public class NumericalMethodsPanel extends JPanel {
 		return pressure - secondPart + thirdPart;
 	}
 
-	public static void main(String[] args) {
-//		NumericalMethodsPanel nm = new NumericalMethodsPanel();
-//		nm.NewtonRhapsonSolver(3.592, 0.04267, 300, 1);
-	}
 
 	public void leer() {
 
