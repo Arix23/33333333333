@@ -13,20 +13,16 @@ import java.io.IOException;
 
 import javax.swing.*;
 
-public class NumericalMethodsPanel extends JPanel implements ActionListener {
+public class NumericalMethodsPanel extends JPanel {
 	private double idealGasConstant = 0.082054;
 	private Image imagen;
 	private JButton solve;
 
 	public NumericalMethodsPanel() {
 		super();
-		this.setPreferredSize(new Dimension(400, 600));
+		this.setPreferredSize(new Dimension(400, 450));
 		this.setOpaque(true);
 		this.setBackground(Color.GRAY);
-
-		this.solve = new JButton("RESOLVER");
-		this.solve.addActionListener(this);
-		this.add(solve, BorderLayout.SOUTH);
 
 		this.imagen = new ImageIcon("Metodos.png").getImage();
 	}
@@ -47,13 +43,13 @@ public class NumericalMethodsPanel extends JPanel implements ActionListener {
 					- (this.vanDerWaalsEquation(a, b, initialGuess, temperature, pressure)
 							/ this.vanDerWaalsEquationDerivative(a, b, initialGuess, temperature, pressure));
 			error = Math.abs(((newtonRhapsonGuess - initialGuess) / newtonRhapsonGuess));
-			// System.out.println("The error is " + error);
 			initialGuess = newtonRhapsonGuess;
 			guess = newtonRhapsonGuess;
 		}
 
 		System.out.println("The new guess is " + guess);
 		System.out.println("Solved in : " + count + " iterations");
+		System.out.println("The error is " + error);
 		System.out.println(" ");
 
 	}
@@ -106,12 +102,4 @@ public class NumericalMethodsPanel extends JPanel implements ActionListener {
 
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		if (e.getSource() == solve) {
-			leer();
-			System.out.println("wuwiuwi");
-		}
-	}
 }
