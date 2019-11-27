@@ -1,7 +1,6 @@
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.TextField;
-
 import javax.swing.JPanel;
 
 public class NumericalMethodsPanel extends JPanel {
@@ -14,7 +13,10 @@ public class NumericalMethodsPanel extends JPanel {
 		this.setPreferredSize(new Dimension(400, 600));
 		this.setOpaque(true);
 		this.setBackground(Color.GRAY);
-		
+		this.a = new TextField(12);
+		this.b = new TextField(12);
+		this.add(a);
+		this.add(b);
 	}
 	
 	public void NewtonRhapsonSolver(double a, double b, double temperature, double pressure) {
